@@ -11,7 +11,7 @@ public class Deck {
     public Deck(){
         for(Type type: Type.values()){ //nested for loop sets up one deck of cards
             for(Suit suit : Suit.values()){
-                deckCards.add(new Card(type, suit));
+                deckCards.push(new Card(type, suit));
             }
         }
     }
