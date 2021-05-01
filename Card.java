@@ -1,3 +1,6 @@
+/*
+Representation of a single card
+*/
 public class Card {
 
     private Type type;
@@ -23,5 +26,9 @@ public class Card {
 
     public void showCard(){
         this.showing = true;
+    }
+
+    public String getCardName(){
+        return type.getType() + " of " + suit.getSuit();
     }
 }

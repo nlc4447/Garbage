@@ -1,3 +1,6 @@
+/*
+Representation of a deck of cards
+*/
 import java.util.ArrayList;
 import java.util.Collections;
 
