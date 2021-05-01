@@ -1,12 +1,12 @@
 /*
 Representation of a deck of cards
 */
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Stack;
 
 public class Deck {
     
-    private ArrayList<Card> deckCards = new ArrayList<Card>();
+    private Stack<Card> deckCards = new Stack<Card>();
 
     public Deck(){
         for(Type type: Type.values()){ //nested for loop sets up one deck of cards
@@ -16,7 +16,7 @@ public class Deck {
         }
     }
 
-    public ArrayList<Card> getDeck(){
+    public Stack<Card> getDeck(){
         return deckCards;
     }
     
@@ -24,9 +24,7 @@ public class Deck {
         /**
          * gets the top card of the deck and removes it
          */
-        Card card = deckCards.get(0);
-        deckCards.remove(0);
-        return card;
+        return deckCards.pop();
     }
 
     public Card getTopCard(){
