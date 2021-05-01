@@ -20,10 +20,20 @@ public class Deck {
         return deckCards;
     }
     
-    public Card getTopCard(){
+    public Card drawTopCard(){
+        /**
+         * gets the top card of the deck and removes it
+         */
         Card card = deckCards.get(0);
         deckCards.remove(0);
         return card;
+    }
+
+    public Card getTopCard(){
+        /**
+         * gets the top card of the deck without removing it
+         */
+        return deckCards.get(0);
     }
 
     public void shuffle(){
