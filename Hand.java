@@ -9,6 +9,9 @@ public class Hand{
     private Deck deck;
 
     public Hand(Deck deck){
+        /**
+         * creates a hand from the top of the deck
+         */
         this.deck = deck;
         for(int i = 0; i < 2; i++){
             for(int j = 0; j < 5; j++){
@@ -22,6 +25,9 @@ public class Hand{
     }
 
     public void displayHand(){
+        /**
+         * displays the current hand in a readable format
+         */
         for(int i = 0; i < 2; i++){
             for(int j = 0; j < 5; j++){
                 if(j == 4){
