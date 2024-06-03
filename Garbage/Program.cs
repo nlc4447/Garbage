@@ -1,6 +1,22 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+// var builder = WebApplication.CreateBuilder(args);
+// var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+// app.MapGet("/", () => "Hello World!");
 
-app.Run();
+// app.Run();
+
+
+
+using System;
+
+namespace Garbage
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        Card myVar = new Card(Type.ACE, Suit.SPADES);
+        Console.WriteLine(myVar.toString());
+        }
+    }
+}
