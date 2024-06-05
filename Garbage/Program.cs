@@ -15,8 +15,10 @@ namespace Garbage
     {
         static void Main(string[] args)
         {
-        Deck myVar = new Deck();
-        Console.WriteLine(myVar.peekTopCard().toSymbol());
+        Deck deck = new Deck();
+        Hand hand = new Hand(deck);
+        hand.displayHand();
+        // Console.WriteLine(myVar.peekTopCard().toSymbol());
 
         }
     }
