@@ -1,6 +1,6 @@
 namespace Garbage
 {
-  public enum Type
+  public enum Rank
   {
     ACE=1,
     TWO,

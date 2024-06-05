@@ -15,7 +15,7 @@ namespace Garbage
     {
         static void Main(string[] args)
         {
-        Card myVar = new Card(Type.ACE, Suit.SPADES);
+        Card myVar = new Card(Rank.ACE, Suit.SPADES);
         Console.WriteLine(myVar.toString());
         }
     }

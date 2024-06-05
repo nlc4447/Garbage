@@ -1,25 +1,25 @@
 namespace Garbage{
     public class Card{
-        private Type type;
+        private Rank rank;
         private Suit suit;
         private string name;
         private bool showing = false;
         private bool garbage = false;
         private bool wild = false;
 
-        public Card(Type type, Suit suit){
-            this.type = type;
+        public Card(Rank rank, Suit suit){
+            this.rank = rank;
             this.suit = suit;
 
-            if(type == Type.KING || type == Type.QUEEN){
+            if(rank == Rank.KING || rank == Rank.QUEEN){
                 this.garbage = true;
             }
 
-            if(type == Type.JACK){
+            if(rank == Rank.JACK){
                 this.wild = true;
             }
 
-            name = type.ToString()[0] + type.ToString().Substring(1).ToLower() + " of " + suit.ToString()[0] + suit.ToString().Substring(1).ToLower();
+            name = rank.ToString()[0] + rank.ToString().Substring(1).ToLower() + " of " + suit.ToString()[0] + suit.ToString().Substring(1).ToLower();
 
         }
     
@@ -27,8 +27,8 @@ namespace Garbage{
             return this.suit;
         }
 
-        public Type getType(){
-            return this.type;
+        public Rank getRank(){
+            return this.rank;
         }
 
         public bool isShowing(){
@@ -43,7 +43,7 @@ namespace Garbage{
             /**
             * returns the card's name in a readable format ex. "Ace of Spades"
             */
-            // return type + " of " + suit;
+            // return rank + " of " + suit;
             return name;
         }
 
