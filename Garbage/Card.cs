@@ -3,6 +3,7 @@ namespace Garbage{
         private Rank rank;
         private Suit suit;
         private string name;
+        private String symbol;
         private bool showing = false;
         private bool garbage = false;
         private bool wild = false;
@@ -21,6 +22,40 @@ namespace Garbage{
 
             name = rank.ToString()[0] + rank.ToString().Substring(1).ToLower() + " of " + suit.ToString()[0] + suit.ToString().Substring(1).ToLower();
 
+            symbol = "";
+
+            switch(suit){
+                case Suit.SPADES:
+                    symbol += "♠";
+                    break;
+                case Suit.CLUBS:
+                    symbol += "♣";
+                    break;
+                case Suit.HEARTS:
+                    symbol += "♥";
+                    break;
+                case Suit.DIAMONDS:
+                    symbol += "♦";
+                    break;
+            }
+
+            switch(rank){
+                case Rank.KING:
+                    symbol += "K";
+                    break;
+                case Rank.QUEEN:
+                    symbol += "Q";
+                    break;
+                case Rank.JACK:
+                    symbol += "J";
+                    break;
+                case Rank.ACE:
+                    symbol += "A";
+                    break;
+                default:
+                    symbol += (int)rank;
+                    break;
+            }
         }
     
         public Suit getSuit(){
@@ -45,6 +80,10 @@ namespace Garbage{
             */
             // return rank + " of " + suit;
             return name;
+        }
+
+        public String toSymbol(){
+            return symbol;
         }
 
         public bool isWild(){
