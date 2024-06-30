@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Deefling\\Documents\\Garbage\\Garbage\\Garbage.csproj": {}
+    "c:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Deefling\\Documents\\Garbage\\Garbage\\Garbage.csproj": {
+    "c:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Deefling\\Documents\\Garbage\\Garbage\\Garbage.csproj",
+        "projectUniqueName": "c:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj",
         "projectName": "Garbage",
-        "projectPath": "C:\\Users\\Deefling\\Documents\\Garbage\\Garbage\\Garbage.csproj",
-        "packagesPath": "C:\\Users\\Deefling\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Deefling\\Documents\\Garbage\\Garbage\\obj\\",
+        "projectPath": "c:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj",
+        "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Deefling\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Noah\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

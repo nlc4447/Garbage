@@ -18,8 +18,7 @@ namespace Garbage
         Deck deck = new Deck();
         Hand hand = new Hand(deck);
         hand.displayHand();
-        // Console.WriteLine(myVar.peekTopCard().toSymbol());
-
+        Console.WriteLine(deck.peekTopCard().toSymbol());
         }
     }
 }
