@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Garbage.props" />
-</Project>
