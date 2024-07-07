@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj": {}
+    "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\SignalRWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj": {
+    "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\SignalRWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj",
-        "projectName": "Garbage",
-        "projectPath": "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\Garbage.csproj",
+        "projectUniqueName": "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\SignalRWebApp.csproj",
+        "projectName": "SignalRWebApp",
+        "projectPath": "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\SignalRWebApp.csproj",
         "packagesPath": "C:\\Users\\Noah\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Noah\\OneDrive\\Documents\\Personal Projects\\Garbage\\Garbage\\Garbage\\obj\\",
         "projectStyle": "PackageReference",
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "HyNsVCsCX/WAHCFTmPPiTl4vdYmB4BBFWJGRdvUk8us=",
-  "Source": "Garbage",
-  "BasePath": "_content/Garbage",
+  "Hash": "CRndNy5bMS+IvhXunzrrHMKhijHaBQFF+wCmmThve8A=",
+  "Source": "SignalRWebApp",
+  "BasePath": "_content/SignalRWebApp",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

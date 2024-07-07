@@ -1,24 +1,16 @@
-// var builder = WebApplication.CreateBuilder(args);
-// var app = builder.Build();
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
-// app.MapGet("/", () => "Hello World!");
-
-// app.Run();
-
-
-
-using System;
-
-namespace Garbage
+namespace SignalRWebApp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-        Deck deck = new Deck();
-        Hand hand = new Hand(deck);
-        hand.displayHand();
-        Console.WriteLine(deck.peekTopCard().toSymbol());
+            CreateHostBuilder(args).Build().Run();
         }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
+                        .ConfigureWebHostDefaults(webBuilder => {webBuilder.UseStartup<Startup>();});
     }
 }
