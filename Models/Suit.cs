@@ -1,4 +1,4 @@
-namespace Garbage
+namespace Models
 {
   public enum Suit
   {

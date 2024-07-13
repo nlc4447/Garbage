@@ -1,1 +1,8 @@
-//class for discard pile
+
+namespace Models 
+{
+    public class Discard 
+    {
+
+    }
+}

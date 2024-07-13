@@ -2,7 +2,7 @@
  * Representation of a player in the game
  */
 
-namespace Garbage{
+namespace Models{
 
     public class Player {
 

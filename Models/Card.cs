@@ -1,97 +1,97 @@
-namespace Garbage{
+namespace Models{
     public class Card{
-        private Rank rank;
-        private Suit suit;
+        private Rank _rank;
+        private Suit _suit;
         private string name;
-        private String symbol;
-        private bool showing = false;
-        private bool garbage = false;
-        private bool wild = false;
+        private string _symbol;
+        private bool _showing = false;
+        private bool _garbage = false;
+        private bool _wild = false;
 
         public Card(Rank rank, Suit suit){
-            this.rank = rank;
-            this.suit = suit;
+            _rank = rank;
+            _suit = suit;
 
-            if(rank == Rank.KING || rank == Rank.QUEEN){
-                this.garbage = true;
+            if(_rank == Rank.KING || _rank == Rank.QUEEN){
+                _garbage = true;
             }
 
-            if(rank == Rank.JACK){
-                this.wild = true;
+            if(_rank == Rank.JACK){
+                _wild = true;
             }
 
-            name = rank.ToString()[0] + rank.ToString().Substring(1).ToLower() + " of " + suit.ToString()[0] + suit.ToString().Substring(1).ToLower();
+            name = _rank.ToString()[0] + _rank.ToString().Substring(1).ToLower() + " of " + _suit.ToString()[0] + _suit.ToString().Substring(1).ToLower();
 
-            symbol = "";
+            _symbol = "";
 
-            switch(suit){
+            switch(_suit){
                 case Suit.SPADES:
-                    symbol += "♠";
+                    _symbol += "♠";
                     break;
                 case Suit.CLUBS:
-                    symbol += "♣";
+                    _symbol += "♣";
                     break;
                 case Suit.HEARTS:
-                    symbol += "♥";
+                    _symbol += "♥";
                     break;
                 case Suit.DIAMONDS:
-                    symbol += "♦";
+                    _symbol += "♦";
                     break;
             }
 
-            switch(rank){
+            switch(_rank){
                 case Rank.KING:
-                    symbol += "K";
+                    _symbol += "K";
                     break;
                 case Rank.QUEEN:
-                    symbol += "Q";
+                    _symbol += "Q";
                     break;
                 case Rank.JACK:
-                    symbol += "J";
+                    _symbol += "J";
                     break;
                 case Rank.ACE:
-                    symbol += "A";
+                    _symbol += "A";
                     break;
                 default:
-                    symbol += (int)rank;
+                    _symbol += (int)_rank;
                     break;
             }
         }
     
         public Suit getSuit(){
-            return this.suit;
+            return _suit;
         }
 
         public Rank getRank(){
-            return this.rank;
+            return _rank;
         }
 
         public bool isShowing(){
-            return showing;
+            return _showing;
         }
 
         public void showCard(){
-            this.showing = true;
+            _showing = true;
         }
 
         public String toString(){
             /**
             * returns the card's name in a readable format ex. "Ace of Spades"
             */
-            // return rank + " of " + suit;
-            return name;
+            // return _rank + " of " + _suit;
+            return this.name;
         }
 
         public String toSymbol(){
-            return symbol;
+            return _symbol;
         }
 
         public bool isWild(){
-            return this.wild;
+            return _wild;
         }
 
         public bool isGarbage(){
-            return this.garbage;
+            return _garbage;
         }
     }
 }

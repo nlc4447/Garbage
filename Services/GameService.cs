@@ -1,7 +1,12 @@
-public class GameService : IGameService
+
+namespace Services 
 {
-    public string ProcessMove(string move)
+    public class GameService : IGameService
     {
-        return "Processed move: " + move;
+        public string ProcessMove(string move)
+        {
+            return "Processed move: " + move;
+        }
     }
 }
+

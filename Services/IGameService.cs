@@ -1,4 +1,8 @@
-public interface IGameService
+
+namespace Services 
 {
-    string ProcessMove(string move);
+    public interface IGameService
+    {
+        string ProcessMove(string move);
+    }
 }

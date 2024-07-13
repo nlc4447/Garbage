@@ -1,8 +1,11 @@
  using Microsoft.AspNetCore.SignalR;
  using System.Threading.Tasks;
+using Services;
 
- public class GameHub : Hub
- {
+namespace Hubs 
+{
+    public class GameHub : Hub
+    {
     private readonly IGameService gameService;
 
     public GameHub(IGameService gameService)
@@ -16,4 +19,6 @@
 
         await Clients.All.SendAsync("ReceiveMove", result);
     }
- }
+    }
+}
+ 

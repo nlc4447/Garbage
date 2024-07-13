@@ -2,7 +2,7 @@
 Representation of the current hand, includes a two dimensional array of the cards as the hand
 */
 
-namespace Garbage{
+namespace Models{
     public class Hand{
         private Card[,] hand = new Card[2,5];
         private Deck deck;
@@ -27,10 +27,11 @@ namespace Garbage{
         public void displayHand(){
             /**
             * displays the current hand in a readable format
+            * this function looks confusing, may need a bit of a refactor
             */
 
             String output = "";
-            for(int i = 0; i < 2; i++){
+            for(int i = 0; i < 2; i++){ 
                 for(int j = 0; j < 5; j++){
                     
                     if(hand[i,j].isShowing()){
