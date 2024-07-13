@@ -1,17 +1,16 @@
-/**
- * Representation of a player in the game
- */
 
-namespace Models{
 
-    public class Player {
+namespace Models
+{
+    public class Player 
+    {
+        private Hand _hand;
+        private string _name;
 
-        private Hand hand;
-        private String name;
-
-        public Player(Hand hand, String name){
-            this.hand = hand;
-            this.name = name;
+        public Player(Hand hand, string name)
+        {
+            _hand = hand;
+            _name = name;
         }
         
     }

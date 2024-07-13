@@ -11,6 +11,6 @@ namespace SignalRWebApp
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) => Host.CreateDefaultBuilder(args)
-                        .ConfigureWebHostDefaults(webBuilder => {webBuilder.UseStartup<Startup>();});
+                        .ConfigureWebHostDefaults(webBuilder => {webBuilder.UseStartup<Startup>();});  // lambda usage to simplify; builds the webhost using configuration from Startup.cs
     }
 }  

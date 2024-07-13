@@ -16,6 +16,4 @@ namespace Models
     QUEEN,
     KING
   }
-
-  
 }

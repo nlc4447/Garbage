@@ -7,6 +7,4 @@ namespace Models
     HEARTS,
     DIAMONDS
   }
-
-  
 }

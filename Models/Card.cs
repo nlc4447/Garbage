@@ -1,30 +1,36 @@
-namespace Models{
-    public class Card{
+namespace Models
+{
+    public class Card
+    {
         private Rank _rank;
         private Suit _suit;
-        private string name;
+        private string _name;
         private string _symbol;
         private bool _showing = false;
         private bool _garbage = false;
         private bool _wild = false;
 
-        public Card(Rank rank, Suit suit){
+        public Card(Rank rank, Suit suit)
+        {
             _rank = rank;
             _suit = suit;
 
-            if(_rank == Rank.KING || _rank == Rank.QUEEN){
+            if(rank == Rank.KING || rank == Rank.QUEEN)
+            {
                 _garbage = true;
             }
 
-            if(_rank == Rank.JACK){
+            if(rank == Rank.JACK)
+            {
                 _wild = true;
             }
 
-            name = _rank.ToString()[0] + _rank.ToString().Substring(1).ToLower() + " of " + _suit.ToString()[0] + _suit.ToString().Substring(1).ToLower();
+            _name = rank.ToString()[0] + rank.ToString().Substring(1).ToLower() + " of " + suit.ToString()[0] + suit.ToString().Substring(1).ToLower();  // readable string format
 
             _symbol = "";
 
-            switch(_suit){
+            switch(suit)
+            {
                 case Suit.SPADES:
                     _symbol += "♠";
                     break;
@@ -39,7 +45,8 @@ namespace Models{
                     break;
             }
 
-            switch(_rank){
+            switch(rank)
+            {
                 case Rank.KING:
                     _symbol += "K";
                     break;
@@ -53,44 +60,48 @@ namespace Models{
                     _symbol += "A";
                     break;
                 default:
-                    _symbol += (int)_rank;
+                    _symbol += (int)rank;
                     break;
             }
         }
     
-        public Suit getSuit(){
+        public Suit getSuit()
+        {
             return _suit;
         }
 
-        public Rank getRank(){
+        public Rank getRank()
+        {
             return _rank;
         }
 
-        public bool isShowing(){
+        public bool isShowing()
+        {
             return _showing;
         }
 
-        public void showCard(){
+        public void showCard()
+        {
             _showing = true;
         }
 
-        public String toString(){
-            /**
-            * returns the card's name in a readable format ex. "Ace of Spades"
-            */
-            // return _rank + " of " + _suit;
-            return this.name;
+        public string toString()
+        {
+            return _name;
         }
 
-        public String toSymbol(){
+        public string toSymbol()
+        {
             return _symbol;
         }
 
-        public bool isWild(){
+        public bool isWild()
+        {
             return _wild;
         }
 
-        public bool isGarbage(){
+        public bool isGarbage()
+        {
             return _garbage;
         }
     }

@@ -6,19 +6,24 @@ namespace Hubs
 {
     public class GameHub : Hub
     {
-    private readonly IGameService gameService;
+        private readonly GameService? _gameService;
 
-    public GameHub(IGameService gameService)
-    {
-        this.gameService = gameService;
-    }
+        public GameHub(IGameService gameService)
+        {
+            _gameService = gameService as GameService;
+        }
 
-    public async Task SendMove(string move)
-    {
-        string result = this.gameService.ProcessMove(move);
+        public async Task SendMove(string move)
+        {
+            /*
+            * Processes a move in this instance of GameService; Sends the move to the server asynchronously
+            */
+            string result = "";
 
-        await Clients.All.SendAsync("ReceiveMove", result);
-    }
+            if (_gameService != null) result = _gameService.ProcessMove(move);
+
+            await Clients.All.SendAsync("ReceiveMove", result);
+        }
     }
 }
  
